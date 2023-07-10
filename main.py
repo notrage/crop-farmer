@@ -3,7 +3,9 @@ import time
 
 def stop():
     
+    keyboard.release('z')
     keyboard.release('q')
+    keyboard.release('s')
     keyboard.release('d')
     keyboard.release('k')
     
@@ -43,7 +45,7 @@ def wait(n, direction):
         if keyboard.is_pressed('p'): pause(direction)
         time.sleep(1)
         
-def replace():
+def replace_93():
     
     keyboard.press('s')
     time.sleep(0.5)
@@ -52,9 +54,15 @@ def replace():
     time.sleep(0.5)
     keyboard.release('z')
     
-
-def left_strafe():
+def replace_155():
     
+    keyboard.press('z')
+    time.sleep(1.5)
+    keyboard.release('z')
+    
+def left_strafe_93():
+    
+    #print("debug: left 93")
     keyboard.press('q')
     
     for i in range (2):
@@ -66,10 +74,11 @@ def left_strafe():
     
     wait(40, 'q')
     keyboard.release('q')
-    replace()
+    replace_93()
     
-def right_strafe():
+def right_strafe_93():
     
+    #print("debug: right 93")
     keyboard.press('d')
     
     for i in range(2):
@@ -81,13 +90,27 @@ def right_strafe():
     
     wait(40, 'd')
     keyboard.release('d')
-    replace()
+    replace_93()
     
-def front_strafe():
+def left_strafe_155():
+    
+    #print("debug: left 155")
+    keyboard.press('q')
+    wait(73, 'q')
+    keyboard.release('q')
+    
+def right_strafe_155():
+    
+    #print("debug: right 155")
+    keyboard.press('d')
+    wait(73, 'd')
+    keyboard.release('d')
+    
+def front_strafe_155():
     
     print("todo")
     
-def back_stafe():
+def back_strafe_155():
     
     print("todo")
     
@@ -95,19 +118,19 @@ def back_stafe():
 
 def wheat_or_potato():
     
-    left_strafe()
-    right_strafe()
-    left_strafe()
-    right_strafe()
-    left_strafe()
+    for i in range(2):
+        left_strafe_93()
+        right_strafe_93()
+        
+    left_strafe_93()
     
 def carrot_or_wart():
     
-    right_strafe()
-    left_strafe()
-    right_strafe()
-    left_strafe()
-    right_strafe()
+    for i in range(2):
+        right_strafe_93()
+        left_strafe_93()
+
+    right_strafe_93()
     
 def cocoa_bean():
     
@@ -123,7 +146,14 @@ def cactus():
     
 def melon_or_pumpkin():
     
-    print("todo")
+    for i in range(4):
+        
+        right_strafe_155()
+        replace_155()
+        left_strafe_155()
+        replace_155()
+        
+    right_strafe_155()
     
 def mushroom():
     
@@ -133,11 +163,21 @@ def mushroom():
 
 if __name__ == '__main__':
     
-    print("CropFarmer Starting")
+    print("CropFarmer Starting\n")
+    
+    to_farm = input("For farm wheat or potato : 1\n"
+                    "For farm wart or carrot  : 2\n"
+                    "For farm melon or pumpkin: 3\n")
+    
     wait(10, '')
 
     while True:
         
         if keyboard.is_pressed('end'): stop()
         keyboard.press('k')
-        wheat_or_potato()   
+        
+        match (to_farm):
+            
+            case '1': wheat_or_potato()
+            case '2': carrot_or_wart()
+            case '3': melon_or_pumpkin()
