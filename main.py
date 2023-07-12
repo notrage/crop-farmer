@@ -36,7 +36,7 @@ def pause(direction):
     keyboard.press('k')
     time.sleep(2)
     keyboard.press(direction)
-    print("CropFarmer unpaused") 
+    print("CropFarmer unpaused")
 
 def wait(n, direction):
     
@@ -205,6 +205,7 @@ def main():
 
     while True:
         
+        #print("debug: enter the main loop")
         if keyboard.is_pressed('end'): stop()
         keyboard.press('k')
         
