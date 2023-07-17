@@ -1,3 +1,4 @@
+import pyautogui
 import keyboard
 import time
 
@@ -7,7 +8,7 @@ def stop():
     keyboard.release('q')
     keyboard.release('s')
     keyboard.release('d')
-    keyboard.release('k')
+    pyautogui.mouseUp()
     
     keyboard.press_and_release('F11')
     time.sleep(1)
@@ -20,7 +21,7 @@ def stop():
 def pause(direction):
     
     keyboard.release(direction)
-    keyboard.release('k')
+    pyautogui.mouseUp()
     print("CropFarmer paused")
     
     keyboard.press_and_release('F11')
@@ -32,8 +33,8 @@ def pause(direction):
         if keyboard.is_pressed('p'): break
         if keyboard.is_pressed('home'): main()
         time.sleep(1)
-        
-    keyboard.press('k')
+     
+    pyautogui.mouseDown()
     time.sleep(2)
     keyboard.press(direction)
     print("CropFarmer unpaused")
@@ -207,7 +208,7 @@ def main():
         
         #print("debug: enter the main loop")
         if keyboard.is_pressed('end'): stop()
-        keyboard.press('k')
+        pyautogui.mouseDown()
         
         match (to_farm):
             
