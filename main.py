@@ -10,9 +10,9 @@ def stop():
     keyboard.release('d')
     pyautogui.mouseUp()
     
-    keyboard.press_and_release('F11')
+    keyboard.press_and_release('esc')
     time.sleep(1)
-    keyboard.press_and_release('F11')
+    keyboard.press_and_release('esc')
     
     print("CropFarmer Stopping")
     wait(10, '')
@@ -24,9 +24,9 @@ def pause(direction):
     pyautogui.mouseUp()
     print("CropFarmer paused")
     
-    keyboard.press_and_release('F11')
+    keyboard.press_and_release('esc')
     time.sleep(1)
-    keyboard.press_and_release('F11')
+    keyboard.press_and_release('esc')
     
     for i in range(1000000):
         if keyboard.is_pressed('end'): stop()
