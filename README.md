@@ -1,7 +1,7 @@
 # Crop Farmer
 
 ## How to use ?
-- First of all, you will need to clone this git directory: 
+- First of all, you will need to clone this git repository: 
 `git clone git@github.com:notrage/crop-farmer.git`
 - You will need to install the module **pyautogui** using the command: `pip3 install pyautogui`
 - Then you will have to run the **crop-farmer** using a python version greater than or equal to 3.10:
