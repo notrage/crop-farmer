@@ -12,7 +12,7 @@ Also make sure you have all of these Python modules installed:
 ```bash
 git clone git@github.com:notrage/crop-farmer.git
 ```
-2. Run the Crop Farmer :
+2. Run the **Crop Farmer** :
 ```bash
 python3 crop_farmer.py
 ```
