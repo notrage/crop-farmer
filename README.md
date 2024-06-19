@@ -20,6 +20,6 @@ or
 ```bash
 python crop_farmer.py
 ```
-If you only hae one Python version on your machine.
+If you only have one Python version on your machine.
 ## Warning
 This **crop-farmer** isn't approved by hypixel and it is possible that it ban you by using this, so you run it **at your own risk**
