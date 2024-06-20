@@ -12,7 +12,7 @@ Also make sure you have all of these Python modules installed:
 ```bash
 git clone git@github.com:notrage/crop-farmer.git
 ```
-2. Run the **Crop Farmer** :
+2. Run the Crop Farmer :
 ```bash
 python3 crop_farmer.py
 ```
@@ -22,4 +22,4 @@ python crop_farmer.py
 ```
 If you only have one Python version on your machine.
 ## Warning
-This **crop-farmer** isn't approved by hypixel and it is possible that it ban you by using this, so you run it **at your own risk**
+This **Crop Farmer** isn't approved by hypixel and it is possible that it ban you by using this, so you run it **at your own risk**
